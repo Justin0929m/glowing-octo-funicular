@@ -16,7 +16,7 @@ body{
 
 
 header{
-    height: 100vh;
+    height: 100svh;
 }
 
 .navbar{
@@ -79,7 +79,7 @@ a{
     background-color: #000;
     padding: 2rem;
     text-align: center;
-   letter-spacing: 10px;
+    letter-spacing: 10px;
 }
 
 .header-btn{
@@ -110,13 +110,13 @@ a{
 }
 
 .about-para{
-    width: 70%;
-    margin-top: 5rem;
+    width: 100%;
+    margin-top: 2rem;
     line-height: 1.9;
 }
 
 .about-para2{
-    width: 70%;
+    width: 100%;
     margin-top: 2rem;
     line-height: 1.9;
 }
@@ -127,6 +127,7 @@ a{
 
 .about-img{
     filter: grayscale(100);
+    width: 50rem;
 }
 
 .pro-title{
@@ -137,34 +138,30 @@ a{
 
 .projects{
     display: grid;
-    grid-template-columns: repeat(2, 50rem);
-    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     gap: 2rem;
     justify-content: center;
     margin: 2rem;
-    /* margin-top: 10rem; */
 }
 
 .img1{
     background: url(../images/2.PNG) center no-repeat;
-    width: 40rem;
-    height: 20rem;
+    width: 100%;
     background-size: cover;
     grid-column: 1 / 2;
 }
 
 .img2{
     background: url(../images/Capture.PNG) center no-repeat;
-    width: 40rem;
-    height: 20rem;
+    width: 100%;
     background-size: cover;
     grid-column: 1 / 2;
 }
 
 .img3{
     background: url(../images/tempsnip.png) center no-repeat;
-    width: 40rem;
-    height: 20rem;
+    width: 100%;
     background-size: cover;
     grid-column: 1 / 2;
     grid-row: 3 / 4;
@@ -172,8 +169,7 @@ a{
 
 .img4{
     background: url(../images/Website.png) center no-repeat;
-    width: 40rem;
-    height: 20rem;
+    width: 100%;
     background-size: cover;
     grid-column: 1 / 2;
     grid-row: 4 / 5;
@@ -193,8 +189,9 @@ a{
 
 .img-des{
     text-align: center;
-    width: 40rem;
+    width: 30rem;
     line-height: 1.9;
+    margin: auto;
 }
 
 .img-des > p{
@@ -204,4 +201,74 @@ a{
 i{
     width: 2rem;
     font-size: 1.5rem;
+}
+
+@media (max-width: 769px) {
+    .small{
+        letter-spacing: 0;
+    }
+
+    .header-img{
+        width: 100svw;
+    }
+
+    .header-title{
+        top: 10rem;
+    }
+
+    .about-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about{
+        margin: 2rem;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .about-img{
+        width: 30rem;
+    }
+    
+    .projects{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(20, 1fr);
+    }
+
+    .img1{
+        background: url(../images/2.PNG) center no-repeat;
+        width: 100%;
+        background-size: cover;
+        grid-row: 2 / 3;
+    }
+
+    .img2{
+        background: url(../images/Capture.PNG) center no-repeat;
+        width: 100%;
+        background-size: cover;
+        grid-row: 3 / 4;
+    }
+    
+    .img3{
+        background: url(../images/tempsnip.png) center no-repeat;
+        width: 100%;
+        background-size: cover;
+        grid-row: 3 / 4;
+    }
+    
+    .img4{
+        background: url(../images/Website.png) center no-repeat;
+        width: 100%;
+        background-size: cover;
+        grid-row: 4 / 5;
+    }
+
+    .img-des1{
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        /* width: 40rem; */
+    }
+
 }
